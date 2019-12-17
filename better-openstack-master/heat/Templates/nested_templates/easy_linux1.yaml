@@ -1,0 +1,35 @@
+description: Heat Template - Linux User network
+heat_template_version: '2018-08-31'
+parameters:
+  user:
+    type: string
+  password:
+    type: string
+  linux1image:
+    type: string
+  linux1flavor:
+    type: string
+  vulnport1: 
+    type: number
+  vulnport2: 
+    type: number
+
+resources:
+
+  linuxhosts:
+    type: OS::Nova::Server
+    properties:
+      name: linux1_host
+      image: {get_param: linux1image}
+      flavor: {get_param: linux1flavor}
+      networks:
+      - subnet: subnet1
+      user_data:
+        str_replace:
+          params:
+            $user: {get_param : user}
+            $password: {get_param : password}
+            $openport1: { get_param: vulnport1 }
+            $openport2: { get_param: vulnport2 }
+          template: {get_file : "https://raw.githubusercontent.com/tra5hpanda/better-openstack/master/heat/host_scripts/linux1.sh"}
+      user_data_format: RAW

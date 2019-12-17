@@ -1,0 +1,67 @@
+description: Heat Template - Basic Resource-better
+heat_template_version: '2018-08-31'
+##Parameters comes before resources.
+##These items can be references in other areas of the template.
+parameters:
+  name:
+    type: string
+    default: MyLinuxHost
+  image:
+    type: string
+    default: Debian Buster
+    constraints:
+    - allowed_values:
+        - Debian Buster
+        - Ubuntu 18.04
+  flavor:
+    type: string
+    default: cy.small
+    constraints:
+    - allowed_values:
+        - cy.small
+        - cy.medium
+  user:
+    type: string
+    default: user
+##Be careful if  you have "white space" between items. 
+##Spaces and tabs will break you.
+  password:
+    type: string
+    label: Password
+    description: Set user password for instances
+    hidden: true
+    default: Security!
+    constraints:
+      -  length: { min: 8, max: 20 }
+         description: Password must be between 8 and 20 characters
+
+resources:
+##Let's get crazy!
+##Use functions to pull in parameters and allow those 
+##values to be passed to the configuration.
+##We're also using a condition to ensure that the Debian image uses a specific flavor.
+  linuxhost:
+    type: OS::Nova::Server
+    properties:
+      name: {get_param : name}
+      image: {get_param : image}
+      flavor: {if : ["imageSize", "cy.small", "cy.medium"]}
+      networks:
+      - network: public
+##But where is the bash scritp? In its own file! 
+##Use a function to grab it. Even BETTER!
+      user_data:
+        str_replace:
+          params:
+            $user: {get_param : user}
+            $password: {get_param : password}
+          template: {get_file : "https://raw.githubusercontent.com/tra5hpanda/better-openstack/master/heat/host_scripts/linux.sh"}
+      user_data_format: RAW
+
+conditions:
+  imageSize: {equals : [{get_param: image}, "Ubuntu 18.04"]}
+
+outputs:
+  ip_address:
+    description: IP address of the instance
+    value: { get_attr: [linuxhost, first_address] }
