@@ -23,38 +23,23 @@ Once you've logged in
 ![](Password.PNG)
 
 
-*Accessing your Cloud Environement* 
+*Accessing your Environement* 
 
-To create or interact with VM's in your cloud environment will will access the “project” dropdown menu on the far left of the screen.  Once you extend the menu, you will select the "instance" page. This is where the details and console access to your VM's exists. See the image below.
+- To create or interact with VM's in your cloud environment will will access the “project” dropdown menu on the far left of the screen.  Once you extend the menu, you will select the "compute" option.  click to open the sub-pages and locate "instance". Click on "instance" to open this page, where the details and console access to your VM's exists. See the image below.
 
 ![](instances.PNG)
 
-Your project is the area where you are able to deploy and interact with the resources allocated to
-you. You may have access to one, or more projects; additionally, multiple
-individuals work within a single project. 
+- In the image above, there are no VM's deployed. You may have VM's in this area already if your Range access is a part of a training module. If you are using the range without an associated training module, you can create VM's here within the limited of your allocated resources. 
 
-_Familiarizing yourself with the menu
-options available on the left hand side of the browser is important._
+*Using a VM in your Environment* 
+ 
+- Select a VM (instance) to access and click on the instance name; this opens a new view on the page. at the top of this view, select and click on the "console" tab. This is where you can access the GUI/CLI of the instance OS. See the image below.
 
-1) Under your Project tab, you will find everything you need to deploy and
-    access your stack.
-2) Assuming your have an environment already deployed for use, you can access any of the instances (Virtual Machines), through the web console.  Navigate to, and expand the "Project" list from the menu on the left. 
+![](VM.PNG)
 
-3) Further expanding the compute tab, you will see the option for “instances”. Highlight and select this option. The "Instance" area that appears in the main area to the right will have all available instances listed. 
-
-![Instance List](images/ComputeAccess.PNG)
-
-4) Select an instace to access and click on the instance name; this opens a new view.
-
-![Compute Access](images/ComputeAccess.PNG)
-
-5.) From this view (of a selected, single instance) you will see a “Console” tab at the top. This is where you can
-    access the GUI/CLI of the instance OS.
-
-![Console View](images/Console.PNG)
     
 Need Help?
 ==============================
-Contact support at 706-721-4000. You can submit a troubleticket and will be contacted as soon as a range support technician is available.  Please ensure you leave good contact information so they may reach you about your issues.
+Contact helpdesk support at 706-721-4000. Let the helpdesk technican know that you need to submit a ticket for the Georgia Cyber Range. You will be contacted as soon as a cyber range support technician is available. Please ensure you leave good contact information so they may reach you about your issues.
 
 
