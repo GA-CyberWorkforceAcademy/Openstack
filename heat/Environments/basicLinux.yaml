@@ -1,9 +1,0 @@
-parameter_defaults:
-  hostname: MyLinuxHost
-  image: Debian Buster
-  flavor: cy.small
-  user: user
-  password: Security!
-
-resource_registry:
-  "OS::Nova::Host": https://raw.githubusercontent.com/tra5hpanda/better-openstack/master/heat/Templates/nested_templates/basic_linux.yaml

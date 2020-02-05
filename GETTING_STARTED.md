@@ -1,22 +1,33 @@
 Getting Started (with Horizon)
 ==============================
 
-To interact with an Openstack hosted VM through a web browser, you
-can access the canonical based dashboard through “Horizon”. 
+- To interact with virtual machines (VMs) hosted on the Georgia Cyber Center through a web browser from anywhere with sufficient internet access. We reccommend at least 20Mbps download speeds for the best experience. You can access dashboard of your account through “Horizon”. 
 
-To reach the dashboard for the Georgia Cyber Range, visit:
+- To reach the dashboard for the Georgia Cyber Range, visit:
 (https://dashboard.gacyberrange.org)
 
-If you have requested and been issued an account, you may use your login and password. The "domain" field will need to be filled in with "default".
+- Your username and a default password are available to you after you complete the Quick Start training. You will be required to read and complete the attestation of the end-user license agreement (EULA) before you before you recieve your log in information. Ensure that you fill in the "domain" section at the login page with "default".  See the image below of the login window.
 
-To request an account, contact: cybertraining@augusta.edu
+![](login.PNG)
 
-You will be required to sign and return a EULA and adhere to the standards set within while using the range.
 
 Once you've logged in
 ======================
 
-Interactions with the OpenStack cloud environment will be done within your “project”. 
+*Change your password*
+
+- You will need to change your password within 48hrs of account creation to ensure your account is not disabled.  To do this, locate the dropdown at the right top of the screen.  The dropdown menu should include a "settings" option.  Navitgate to "settings.
+
+- Within the settings page, you will see on the left, horizonal menu bar, the "change password" option where you can set a new, password for your account. See the image below.
+
+![](Password.PNG)
+
+
+*Accessing your Cloud Environement* 
+
+To create or interact with VM's in your cloud environment will will access the “project” dropdown menu on the far left of the screen.  Once you extend the menu, you will select the "instance" page. This is where the details and console access to your VM's exists. See the image below.
+
+![](instances.PNG)
 
 Your project is the area where you are able to deploy and interact with the resources allocated to
 you. You may have access to one, or more projects; additionally, multiple
