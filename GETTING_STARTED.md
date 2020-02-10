@@ -40,6 +40,6 @@ Once you've logged in
     
 Need Help?
 ==============================
-Contact helpdesk support at 706-721-4000. Let the helpdesk technician know that you need to submit a ticket for the Georgia Cyber Range. You will be contacted as soon as a cyber range support technician is available. Please ensure you leave good contact information so they may reach you about your issues.
+If you are having technical difficulties, you may submit a trouble ticket at: https://link. You will be contacted as soon as a cyber range support technician is available. Please ensure you leave good contact information so they may reach you about your issues.
 
 
